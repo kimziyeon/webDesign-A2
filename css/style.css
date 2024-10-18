@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    color: #333333;
+}
+
+.wrap {
+    position: relative;
+}
+
+.inner {
+    width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(5, 90, 69);
+    height: 100px;
+    position: relative;
+}
+
+header h2 {
+    padding: 30px 40px;
+}
+
+header h2 a {}
+
+nav {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 999;
+}
+
+nav>ul {
+    display: flex;
+
+}
+
+nav>ul li {
+    width: 150px;
+}
+
+
+nav>ul>li:hover>a {
+    background-color: rgb(187, 187, 187);
+    color: #fff;
+}
+
+nav>ul>li>a {
+    height: 50px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+
+}
+
+
+
+.sub {
+    height: 120px;
+    display: none;
+}
+
+.sub>li {
+    width: 150px;
+    padding: 10px;
+}
+
+.sub li:hover {
+    background-color: rgb(187, 187, 187);
+    color: #fff;
+}
+
+.on {
+    background-color: rgb(187, 187, 187);
+    color: #fff;
+}
+
+.sub li>a {
+    display: block;
+    text-align: center;
+
+}
+
+.sub_bg {
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 995;
+    display: none;
+}
+
+.content {
+    height: 500px;
+}
+
+.content .slide {
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .slide>ul {
+    display: flex;
+    width: 3600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.content .slide>ul li {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+
+
+.slide>ul li a>h3 {
+    width: 1200px;
+    height: 300px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    align-content: center;
+}
+
+.slide ul .s1 {
+    background: url(/img/img1.jpg) no-repeat center/cover;
+}
+
+.slide ul .s2 {
+    background: url(/img/img2.jpg) no-repeat center/cover;
+
+}
+
+.slide ul .s3 {
+    background: url(/img/img3.jpg) no-repeat center/cover;
+
+}
+
+.con {
+    width: 1200px;
+    height: 200px;
+    display: flex;
+}
+
+
+.con .con1 {
+    width: 400px;
+    background-color: rgb(5, 90, 69);
+    color: #fff;
+    padding: 30px 25px;
+}
+
+.con .con1>h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.con .con1 .notice {
+    width: 400px;
+}
+
+.con .con1 .notice li {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.con .con2 {
+    width: 400px;
+    padding: 30px 25px;
+}
+
+.con .con2>h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+.con .con2 .gall {
+    width: 400px;
+    display: flex;
+    gap: 20px;
+}
+
+.con .con2 .gall li {}
+
+.con .con3 {
+    width: 400px;
+    padding: 30px 25px;
+    background: url(/img/banner.jpg)no-repeat center / cover;
+}
+
+.con .con3 .banner {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 140px;
+    padding: 20px;
+}
+
+.con .con3 .banner h3 {}
+
+.con .con3 .banner>div {
+    margin-top: 20px;
+}
+
+footer {
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+footer h2 {}
+
+footer .fams {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    font-weight: bold;
+}
+
+footer .fams select {
+    width: 130px;
+}
+
+footer .fams select option {}
+
+footer .copy {}
+
+.popup {
+
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: none;
+}
+
+.popup h3 {}
+
+.popup .popb {
+    margin: 20px 0;
+
+}
+
+
+.popup .popcont {
+    text-align: left;
+    width: 400px;
+    margin-left: 20px;
+
+}
+
+.popup .xbtn {
+    margin-top: 20px;
+}
+
+.popup .xbtn button {
+    border: none;
+    background: none;
+}
