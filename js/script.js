@@ -1,50 +1,54 @@
+
+
 $(function () {
-
-    $('.pop_on').click(function () {
-        $('.popup').show();
-        return false;
+    $('nav>ul>li').mouseenter(function () {
+        $('.sub').stop().slideDown();
+        $('.n_back').stop().slideDown();
     })
 
-    $('.xbtn').click(function () {
-        $('.popup').hide();
+    $('nav>ul>li').mouseleave(function () {
+        $('.sub').stop().slideUp();
+        $('.n_back').stop().slideUp();
     })
 
-    $('nav ul li').mouseenter(function () {
-        $('.sub,.sub_bg').stop().slideDown();
+    $('nav>ul>li').focusin(function () {
+        $('.sub').stop().slideDown();
+        $('.n_back').stop().slideDown();
+        $(this).children('a').addClass('on');
     })
 
-    $('nav').mouseleave(function () {
-        $('.sub,.sub_bg').stop().slideUp();
+    $('nav>ul>li').focusout(function () {
+        $('.sub').stop().slideUp();
+        $('.n_back').stop().slideUp();
+        $(this).children('a').removeClass('on');
     })
 
-    $('nav ul li a').focusin(function () {
-        $('.sub,.sub_bg').stop().slideDown();
-
+    $('.sub>li').focusin(function () {
+        $(this).children('a').addClass('on');
     })
-
-    $('.sub li').focusin(function () {
-        $(this).addClass('on');
-    })
-
-    $('.sub li').focusout(function () {
-        $(this).removeClass('on');
-    })
-
-    $('.sub li:last-child').focusout(function () {
-        $('.sub,.sub_bg').stop().slideUp();
+    $('.sub>li').focusout(function () {
+        $(this).children('a').removeClass('on');
     })
 
 
 
-
+    // 슬라이드
     function slide() {
-        $('.slide ul').animate({ left: '-1200px' }, 1000, function () {
-            $('.slide ul').append(
-                $('.slide ul li').first());
-            $('.slide ul').css({ left: '0' })
+        $('.slide>ul').animate({ left: '-1200px' }, 1000, function () {
+            $(this).append($('.slide>ul>li').first());
+            $('.slide>ul').css({ left: '0' });
         })
     }
     setInterval(slide, 3000)
 
+    // 팝업
+
+    $('.pop_on').click(function () {
+        $('.pop').show();
+    })
+
+    $('.pop_off').click(function () {
+        $('.pop').hide();
+    })
 
 })
